@@ -1,0 +1,59 @@
+{
+  "topics": [
+    {"topic": "Getting Started", "questions": [
+      {"q": "What is FINOVA?", "a": "FINOVA is an intelligent personal finance planning platform. It combines AI-driven goal parsing with a deterministic Python calculation engine to evaluate your financial health, model multi-scenario cash flows and stress-test your plan. It is for educational and informational purposes only."},
+      {"q": "How do I use FINOVA?", "a": "Create an account, open Financial Information and enter your income, expenses, assets, debts, time horizon, liquidity need and risk level. Press Confirm to see your results, then continue to Savings & Investment to choose and plan a goal."},
+      {"q": "How do I create an account and log in?", "a": "Hover over (or tap) the person icon at the top right and choose Register. Enter your full name, email, a password with at least 8 characters including letters and numbers, and confirm it. To log in later, choose Log in from the same menu."}
+    ]},
+    {"topic": "Financial Information", "questions": [
+      {"q": "How do I enter my income and expenses?", "a": "Open Financial Information and type your monthly income and monthly expenses in VND. Amounts accept digits only (0 or higher) and thousands are separated automatically with commas, for example 25,000,000."},
+      {"q": "How do I enter my assets and liabilities?", "a": "Enter your assets and investments (VND) and your total current debt (VND) plus the monthly debt payment (VND per month). Use 0 if you have none."},
+      {"q": "What should I do if some financial information is missing?", "a": "Enter 0 for items that do not apply, or estimate them. FINOVA flags missing or conflicting data (for example debt payments without income) so you can correct it before relying on the results."}
+    ]},
+    {"topic": "Financial Health Assessment", "questions": [
+      {"q": "How does FINOVA assess my financial health?", "a": "The engine computes net cash flow, expense-to-income ratio, debt-to-income ratio, savings capacity and net worth, then rates cash flow, debt burden, liquidity and savings capacity as good, warning or critical."},
+      {"q": "What do cash flow, DTI, and net worth mean?", "a": "Cash flow is income minus living expenses and debt payments. DTI (debt-to-income) is monthly debt payments divided by monthly income. Net worth is total assets (assets plus investments) minus total current liabilities."},
+      {"q": "How should I interpret my financial assessment results?", "a": "Start with the strengths and vulnerabilities list, fix high-priority items such as negative cash flow, a DTI above 36% or an emergency fund below target, and only then move on to savings and investment goals."}
+    ]},
+    {"topic": "Financial Goals", "questions": [
+      {"q": "How do I create a financial goal?", "a": "In Savings & Investment, enter a goal name, or load the AI-recommended goals. Each goal has a target amount, existing funds, a timeframe, a priority and optional constraints."},
+      {"q": "How do I set a target amount and timeframe?", "a": "Type the target amount in VND and the number of years (1 to 50). FINOVA then calculates the required monthly savings and the expected time to reach the goal."},
+      {"q": "How does FINOVA determine whether my goal is achievable?", "a": "The engine projects your savings capacity (with a simulated yield) up to the deadline and compares it with the target. The completion percentage shows how much of the target the projection reaches; it is an estimate, not a guarantee."}
+    ]},
+    {"topic": "Savings & Investment Planning", "questions": [
+      {"q": "How much should I save each month?", "a": "The required monthly savings figure for your chosen goal answers this. It is the amount that reaches the target by the deadline under the stated yield assumption. Compare it with your savings capacity to see the gap."},
+      {"q": "How does FINOVA calculate the required monthly savings?", "a": "It grows your existing funds at the assumed monthly yield, subtracts the result from the target, and divides the remaining amount by the future-value factor of regular monthly deposits over the timeframe."},
+      {"q": "How should I interpret the estimated investment returns?", "a": "Yields are simulated assumptions, not predictions or promises. Actual returns can be lower, higher or negative. Use the What-If tool to test lower yields and losses."}
+    ]},
+    {"topic": "Scenarios & What-If Analysis", "questions": [
+      {"q": "What are the five financial scenarios?", "a": "Severely Conservative, Conservative, Baseline, Optimistic and Highly Optimistic. They vary income, expenses and simulated yield, and the AI ranks them by suitability for your finances."},
+      {"q": "How can I change income, expenses, or savings assumptions?", "a": "In the What-If & Stress Testing section, choose plus or minus and type a percentage for income, expenses, unforeseen expenses, savings rate and debt repayment, then run the analysis."},
+      {"q": "How do I compare different scenarios?", "a": "Use the side-by-side scenario table and projection charts on the results page. In Savings & Investment you can also save several plans and compare them side by side."}
+    ]},
+    {"topic": "Excel Import & Export", "questions": [
+      {"q": "How do I upload my financial information using Excel?", "a": "On the Financial Information page, download the Excel template, fill in the Value column and use Upload Excel. FINOVA parses and validates the file and shows warnings for missing or invalid fields."},
+      {"q": "What file format is supported?", "a": "Excel workbooks in .xlsx format. Use the provided template so the field names match."},
+      {"q": "How do I export my financial plan and results?", "a": "Use the Export Financial Report button on the results page, or Export Plan in Savings & Investment. Both download an .xlsx file."}
+    ]},
+    {"topic": "AI Chatbot", "questions": [
+      {"q": "What can FINOVA's AI chatbot help me with?", "a": "It guides you through using FINOVA, explains financial terms, and helps you understand evaluation results, simulation scenarios and savings or investment recommendations based on system data."},
+      {"q": "How does the chatbot use my financial data?", "a": "When you have saved financial information, the server passes the engine's calculated results to the chatbot as context. It never claims data it was not given and never changes calculated figures."},
+      {"q": "What should I do if the chatbot gives an unclear answer?", "a": "Ask a more specific follow-up, mention the section or figure you mean, or send an AI Chatbot Support request from the Customer Support form."}
+    ]},
+    {"topic": "Privacy & Security", "questions": [
+      {"q": "How does FINOVA protect my financial information?", "a": "Passwords are stored as salted hashes, sessions use signed cookies, and the AI API key is kept in a server-side environment file and never sent to your browser."},
+      {"q": "Who can access my data?", "a": "Your financial data is tied to your account and is only used to produce your own results. Do not share your password and always log out on shared computers."},
+      {"q": "How can I manage or delete my information?", "a": "You can update your profile and financial information at any time from Customer Account and Financial Information. To delete your account data, send an Account & Login Support request."}
+    ]}
+  ],
+  "support_types": [
+    {"id": "technical", "label": "Technical Issues", "desc": "Report website errors, login failures, frozen pages or features that do not work."},
+    {"id": "account", "label": "Account & Login Support", "desc": "Help with registration, login, forgotten passwords and account information."},
+    {"id": "analysis", "label": "Financial Analysis Issues", "desc": "Report inaccurate, confusing or incomplete financial analysis results."},
+    {"id": "goal", "label": "Goal Planning Support", "desc": "Help setting financial goals, planning savings or simulating scenarios."},
+    {"id": "excel", "label": "Excel Import/Export Issues", "desc": "Help with uploading, reading data or exporting Excel reports."},
+    {"id": "chatbot", "label": "AI Chatbot Support", "desc": "Report wrong answers, misunderstood questions or unclear explanations from the chatbot."},
+    {"id": "feedback", "label": "Feedback & Suggestions", "desc": "Send comments or suggestions to improve the website."},
+    {"id": "other", "label": "Other Issues", "desc": "Any other problem not listed above."}
+  ]
+}

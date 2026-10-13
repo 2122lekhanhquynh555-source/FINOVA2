@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: finova
+    runtime: python
+    plan: free                 # FREE instance type. Do NOT add `disk`, `databases`, workers or a paid `plan`: those are billed.
+                               # The free filesystem is wiped on restart/redeploy (data is temporary).
+    buildCommand: pip install -r requirements.txt && (python tools/fetch_photos.py || true)
+    startCommand: gunicorn app:app --workers 1 --timeout 120 --bind 0.0.0.0:$PORT
+    healthCheckPath: /healthz
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.3
+      - key: SECRET_KEY
+        generateValue: true
+      - key: GEMINI_API_KEY
+        sync: false            # paste your Google AI Studio key in the Render dashboard (never commit it)
+      - key: GEMINI_MODEL
+        value: gemini-2.5-flash
+      - key: ADMIN_EMAILS
+        sync: false
+      - key: ALLOW_DEMO_RESET
+        value: "1"             # DEMO ONLY: shows the reset code on screen. Remove once SMTP_* is configured.

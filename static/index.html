@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FINOVA | Personal finance planning</title>
+<meta name="description" content="FINOVA — Plan Smarter. Achieve Your Goals. Goal-based personal finance planning engine.">
+<link rel="icon" href="/static/img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/static/css/style.css">
+<script src="/static/js/theme.js"></script>
+</head>
+<body>
+<header class="topbar" id="topbar">
+  <div class="topbar-left">
+    <button class="icon-btn only-app" id="menuBtn" aria-label="Toggle sidebar" title="Open / close menu"></button>
+    <a class="brand" href="#/" id="brand"><img src="/static/img/logo.png" alt="Group 7 logo"><span>FINOVA</span></a>
+  </div>
+  <div class="topbar-right">
+    <button class="guide-btn" id="guideBtn" type="button">Guide</button>
+    <div class="user-menu" id="userMenu">
+      <button class="icon-btn" id="userBtn" aria-label="Account" aria-haspopup="true"><span class="dot" id="userDot" hidden></span></button>
+      <div class="dropdown" id="userDrop" role="menu"></div>
+    </div>
+    <button class="icon-btn" id="themeBtn" aria-label="Switch light / dark mode"></button>
+  </div>
+</header>
+<div class="shell">
+  <aside class="sidebar" id="sidebar" aria-label="Tools"></aside>
+  <div class="scrim" id="scrim"></div>
+  <main id="view" class="view"></main>
+</div>
+
+<div class="modal" id="guideModal" hidden>
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="guideTitle">
+    <button class="modal-close" id="guideClose" aria-label="Close">×</button>
+    <h2 id="guideTitle">How to use FINOVA</h2>
+    <div id="guideBody"></div>
+  </div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script src="/static/js/scenes.js"></script>
+<script src="/static/js/core.js"></script>
+<script src="/static/js/views-a.js"></script>
+<script src="/static/js/views-b.js"></script>
+<script src="/static/js/app.js"></script>
+</body>
+</html>
